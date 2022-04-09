@@ -56,6 +56,10 @@ import DialogueBoxPsych;
 import sys.FileSystem;
 #end
 
+#if android
+import ui.AndroidControls:
+#end
+
 using StringTools;
 
 class PlayState extends MusicBeatState
