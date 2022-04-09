@@ -136,6 +136,20 @@ class EditorPlayState extends MusicBeatState
 		FlxG.mouse.visible = false;
 
 		//sayGo();
+		
+    if(!ClientPrefs.controllerMode)
+		{
+			FlxG.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyPress);
+			FlxG.stage.addEventListener(KeyboardEvent.KEY_UP, onKeyRelease);
+		}
+
+                #if android
+                addAndroidControls();
+                #end
+                #if android
+                androidc.visible = true;
+                #end
+
 		super.create();
 	}
 
